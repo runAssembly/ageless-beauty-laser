@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ageless Beauty Laser & Spa · Surrey, BC</title>
+<meta name="description" content="A Surrey laser & skincare clinic where medical-grade technology and certified, caring hands help you renew, replenish and revitalize your skin. Since 2016.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#faf6ef;
+    --cream2:#f4ede2;
+    --white:#fffdf9;
+    --gold:#c19a5b;
+    --gold2:#b08a45;
+    --mauve:#a67fa6;
+    --mauve2:#caa8ca;
+    --ink:#2b2620;
+    --muted:#6c645a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Jost',sans-serif;font-weight:300;
+    color:var(--ink);background:var(--cream);
+    line-height:1.75;letter-spacing:.02em;overflow-x:hidden;
+  }
+  h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.08;letter-spacing:.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+  .eyebrow{
+    font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--gold2);font-weight:400;margin-bottom:1.1rem;
+  }
+  .btn{
+    display:inline-block;font-family:'Jost',sans-serif;font-weight:400;
+    font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;
+    padding:1rem 2rem;cursor:pointer;border:none;transition:.35s;
+  }
+  .btn-solid{background:var(--gold);color:#fff}
+  .btn-solid:hover{background:var(--gold2)}
+  .btn-outline{background:transparent;color:var(--ink);border:1px solid var(--gold)}
+  .btn-outline:hover{background:var(--gold);color:#fff}
+
+  /* NAV */
+  header{position:sticky;top:0;z-index:60;background:rgba(250,246,239,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(193,154,91,.22)}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:.7rem clamp(20px,5vw,56px)}
+  nav .logo img{height:56px;display:block}
+  .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+  .nav-links a{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);transition:.3s;position:relative}
+  .nav-links a:not(.nav-book):after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1px;background:var(--gold);transition:.3s}
+  .nav-links a:not(.nav-book):hover:after{width:100%}
+  .nav-book{background:var(--gold);color:#fff !important;padding:.72rem 1.5rem}
+  .nav-book:hover{background:var(--gold2)}
+  .ig-ico{width:19px;height:19px;stroke:var(--mauve);fill:none;stroke-width:1.6}
+  .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+  .hamburger span{width:26px;height:2px;background:var(--ink);transition:.3s}
+
+  /* HERO */
+  .hero{display:grid;grid-template-columns:1.05fr 1fr;min-height:88vh}
+  .hero-img{background:url('img/ageless-beauty-laser-hero.jpg') center/cover no-repeat;min-height:340px}
+  .hero-text{background:var(--cream);display:flex;flex-direction:column;justify-content:center;padding:clamp(2.5rem,6vw,5rem)}
+  .hero-text h1{font-size:clamp(2.8rem,6vw,5rem);margin:.6rem 0 1.3rem}
+  .hero-text .sub{font-size:1.06rem;color:var(--muted);max-width:34ch;margin-bottom:1.3rem}
+  .hero-hours{font-size:.85rem;color:var(--gold2);letter-spacing:.06em;border-left:2px solid var(--mauve2);padding-left:1rem;margin-bottom:2rem}
+  .hero-btns{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1.4rem}
+  .hero-trust{font-size:.85rem;color:var(--muted);letter-spacing:.05em}
+  .hero-phone{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin-top:.5rem}
+
+  /* SECTIONS */
+  section{padding:clamp(4rem,9vw,7.5rem) 0}
+  .section-head{text-align:center;max-width:760px;margin:0 auto 3.5rem}
+  .section-head h2{font-size:clamp(2.1rem,4.6vw,3.4rem)}
+  .rule{width:56px;height:1px;background:var(--gold);margin:1.4rem auto}
+
+  /* ABOUT */
+  #about{background:var(--cream2)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+  .about-visual{position:relative;padding:14px;border:1px solid rgba(193,154,91,.4)}
+  .about-visual img{width:100%;height:100%;object-fit:cover;display:block;min-height:420px}
+  .about-chip{position:absolute;bottom:-14px;left:32px;background:var(--white);color:var(--mauve);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;padding:.7rem 1.3rem;border:1px solid rgba(166,127,166,.4)}
+  .about-text h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:1.5rem}
+  .about-text p{color:var(--muted);margin-bottom:1.1rem}
+  .accent-line{color:var(--ink);border-left:2px solid var(--gold);padding-left:1.2rem;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.25rem;line-height:1.5}
+
+  /* TREATMENTS */
+  .t-group{margin-bottom:3rem}
+  .t-group-title{display:flex;align-items:center;gap:1.2rem;margin-bottom:1.6rem}
+  .t-group-title h3{font-size:1.5rem;color:var(--ink);white-space:nowrap}
+  .t-group-title .l{flex:1;height:1px;background:rgba(193,154,91,.35)}
+  .t-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem}
+  .t-card{background:var(--white);border:1px solid rgba(193,154,91,.2);padding:1.5rem 1.4rem;cursor:pointer;transition:.35s;position:relative;overflow:hidden}
+  .t-card:before{content:"";position:absolute;left:0;top:0;height:100%;width:3px;background:var(--mauve2);transform:scaleY(0);transform-origin:top;transition:.35s}
+  .t-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(43,38,32,.4)}
+  .t-card:hover:before{transform:scaleY(1)}
+  .t-card h4{font-size:1.25rem;margin-bottom:.35rem}
+  .t-card span{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold2)}
+
+  /* REVIEWS */
+  #reviews{background:var(--cream2)}
+  .rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.6rem}
+  .rev{background:var(--white);border:1px solid rgba(193,154,91,.2);padding:2.2rem}
+  .stars{color:var(--gold);letter-spacing:.2em;margin-bottom:1rem}
+  .rev p{font-family:'Cormorant Garamond',serif;font-size:1.35rem;line-height:1.45;font-style:italic;color:var(--ink)}
+  .rev-big{text-align:center;margin-top:3rem;font-size:.9rem;color:var(--muted);letter-spacing:.08em}
+  .rev-big strong{color:var(--gold2);font-weight:400}
+
+  /* CONTACT */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:stretch}
+  .contact-info h3{font-size:1.6rem;margin-bottom:1.4rem}
+  .contact-info .row{margin-bottom:1.3rem}
+  .contact-info .lbl{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);margin-bottom:.2rem}
+  .contact-info .val{font-size:1.05rem;color:var(--ink)}
+  .contact-info a.val:hover{color:var(--gold2)}
+  .map iframe{width:100%;height:100%;min-height:360px;border:1px solid rgba(193,154,91,.35);filter:sepia(.1) saturate(.9)}
+
+  /* CTA */
+  .cta{background:linear-gradient(135deg,#f4ede2,#efe4d3);text-align:center}
+  .cta h2{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:1.2rem}
+  .cta p{color:var(--muted);max-width:46ch;margin:0 auto 2rem}
+
+  /* FOOTER */
+  footer{background:var(--cream);border-top:1px solid rgba(193,154,91,.25);padding:3.5rem 0 2rem}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+  footer .logo img{height:64px;margin-bottom:1rem}
+  .foot-tag{color:var(--muted);font-size:.95rem;max-width:32ch}
+  footer h5{font-family:'Jost',sans-serif;font-weight:500;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);margin-bottom:1.1rem}
+  footer ul{list-style:none}
+  footer ul li{margin-bottom:.55rem}
+  footer ul li a{font-size:.92rem;color:var(--muted);transition:.3s}
+  footer ul li a:hover{color:var(--gold2)}
+  .foot-book{background:none;border:none;cursor:pointer;font-family:inherit;font-size:.92rem;color:var(--muted);padding:0;text-align:left}
+  .foot-book:hover{color:var(--gold2)}
+  .copyright{text-align:center;font-size:.75rem;letter-spacing:.1em;color:var(--muted);border-top:1px solid rgba(193,154,91,.2);padding-top:1.8rem}
+
+  /* MODAL */
+  .modal-bg{position:fixed;inset:0;background:rgba(43,38,32,.55);backdrop-filter:blur(4px);z-index:100;display:none;align-items:center;justify-content:center;padding:1.2rem}
+  .modal-bg.open{display:flex}
+  .modal{background:var(--white);max-width:540px;width:100%;padding:clamp(2rem,5vw,3rem);position:relative;max-height:90vh;overflow-y:auto;border-top:3px solid var(--gold)}
+  .modal .close{position:absolute;top:1rem;right:1.2rem;background:none;border:none;font-size:1.8rem;cursor:pointer;color:var(--muted);line-height:1;font-family:'Cormorant Garamond',serif}
+  .modal .eyebrow{margin-bottom:.6rem}
+  .modal h3{font-size:2rem;margin-bottom:1rem}
+  .modal p{color:var(--muted)}
+  .modal label{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold2);margin:1.1rem 0 .35rem}
+  .modal input,.modal select,.modal textarea{width:100%;padding:.8rem .9rem;border:1px solid rgba(193,154,91,.4);background:var(--cream);font-family:'Jost',sans-serif;font-size:.95rem;color:var(--ink)}
+  .modal textarea{min-height:90px;resize:vertical}
+  .modal .btn-solid{width:100%;margin-top:1.6rem}
+  .form-success{display:none;text-align:center;padding:1rem 0}
+  .form-success.show{display:block}
+  .form-success p{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--ink);font-style:italic}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s ease}
+  .reveal.in{opacity:1;transform:none}
+  .no-js .reveal{opacity:1;transform:none}
+
+  @media(max-width:900px){
+    .hero{grid-template-columns:1fr}
+    .hero-img{min-height:42vh;order:-1}
+    .about-grid,.contact-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr;gap:1.8rem}
+    .nav-links{position:fixed;top:71px;right:0;height:calc(100vh - 71px);width:min(80vw,320px);background:var(--cream);flex-direction:column;align-items:flex-start;padding:2.4rem;gap:1.6rem;transform:translateX(100%);transition:.4s;border-left:1px solid rgba(193,154,91,.25);box-shadow:-20px 0 60px -30px rgba(0,0,0,.4)}
+    .nav-links.open{transform:none}
+    .hamburger{display:flex}
+  }
+</style>
+</head>
+<body class="no-js">
+<script>document.body.classList.remove('no-js')</script>
+
+<!-- NAV -->
+<header>
+  <nav>
+    <a href="#top" class="logo"><img src="img/ageless-beauty-laser-logo.png" alt="Ageless Beauty Laser & Spa"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#treatments">Treatments</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://www.instagram.com/agelessbeautylaser/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg class="ig-ico" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="var(--mauve)" stroke="none"/></svg>
+      </a></li>
+      <li><a href="#" class="nav-book" onclick="openBooking();return false">Book Now</a></li>
+    </ul>
+    <button class="hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div id="top" class="hero">
+  <div class="hero-img" role="img" aria-label="Ageless Beauty Laser & Spa"></div>
+  <div class="hero-text">
+    <p class="eyebrow">Award-Winning Med Spa · Surrey, BC · Since 2016</p>
+    <h1>Look and feel your very best.</h1>
+    <p class="sub">A Surrey laser & skincare clinic where medical-grade technology and certified, caring hands help you renew, replenish and revitalize your skin.</p>
+    <p class="hero-hours">Complimentary consultations · Tuesday to Sunday, 10am–6pm</p>
+    <div class="hero-btns">
+      <button class="btn btn-solid" onclick="openBooking()">Book a Consultation</button>
+      <a href="#treatments" class="btn btn-outline">Explore Treatments</a>
+    </div>
+    <p class="hero-trust">4.5 ★ · 330+ Google reviews</p>
+    <p class="hero-phone">Call us · 778-565-9055</p>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <img src="img/ageless-beauty-laser-about.jpg" alt="Inside Ageless Beauty Laser & Spa">
+        <span class="about-chip">Surrey, BC · Since 2016</span>
+      </div>
+      <div class="about-text reveal">
+        <p class="eyebrow">Our Clinic</p>
+        <h2>Beautiful skin, made a science and an art.</h2>
+        <p>Renew, replenish and revitalize your skin. A smooth, toned, radiant complexion — along with thick, luxurious, shiny hair — is a sure sign of youthfulness and vitality. Our clinic offers complimentary consultations to assess your skincare goals, and to inform, educate and explain our advanced medical procedures while exploring your various options.</p>
+        <p>Our certified staff is experienced in a wide variety of treatments using medical-grade technology and professional cosmeceutical products to provide the right solutions for your personal skincare needs.</p>
+        <p class="accent-line">We are dedicated to achieving quality results while providing safe, effective, gold-standard treatments — proudly serving Surrey and the Greater Vancouver community since 2016.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENTS -->
+<section id="treatments">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">What We Offer</p>
+      <h2>Our Treatments</h2>
+      <div class="rule"></div>
+      <p style="color:var(--muted)">Explore our medical-grade laser and skincare services. Select any treatment to learn more.</p>
+    </div>
+    <div id="treatmentGroups"></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Kind Words</p>
+      <h2>Loved by our clients</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="rev-grid">
+      <div class="rev reveal"><div class="stars">★★★★★</div><p>“Warm, professional and genuinely caring — I always leave feeling my very best.”</p></div>
+      <div class="rev reveal"><div class="stars">★★★★★</div><p>“The consultation was thorough and honest. They truly explain your options before anything.”</p></div>
+      <div class="rev reveal"><div class="stars">★★★★★</div><p>“Clean, calming clinic with gold-standard technology. My skin has never looked better.”</p></div>
+    </div>
+    <p class="rev-big reveal"><strong>4.5 ★ · 330+ Google reviews</strong> · Serving Surrey & Greater Vancouver since 2016</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap reveal">
+    <h2>Ready to renew, replenish & revitalize?</h2>
+    <p>Book your complimentary consultation and let our certified team craft the right plan for your skin.</p>
+    <button class="btn btn-solid" onclick="openBooking()">Book a Consultation</button>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Visit Us</p>
+      <h2>Contact & Location</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>Ageless Beauty Laser & Spa</h3>
+        <div class="row"><div class="lbl">Address</div><div class="val">Unit 111 – 8645 160 St<br>Surrey, BC V4N 1G4</div></div>
+        <div class="row"><div class="lbl">Phone</div><a class="val" href="tel:7785659055">778-565-9055</a></div>
+        <div class="row"><div class="lbl">Email</div><a class="val" href="mailto:agelessbeautylaser@gmail.com">agelessbeautylaser@gmail.com</a></div>
+        <div class="row"><div class="lbl">Hours</div><div class="val">Tuesday – Sunday · 10am – 6pm</div></div>
+        <div class="row"><div class="lbl">Instagram</div><a class="val" href="https://www.instagram.com/agelessbeautylaser/" target="_blank" rel="noopener">@agelessbeautylaser</a></div>
+        <button class="btn btn-solid" style="margin-top:.6rem" onclick="openBooking()">Book Now</button>
+      </div>
+      <div class="map reveal">
+        <iframe src="https://www.google.com/maps?q=Unit%20111%20-%208645%20160%20St%2C%20Surrey%2C%20BC%20V4N%201G4&output=embed" loading="lazy" title="Map to Ageless Beauty Laser & Spa"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo"><img src="img/ageless-beauty-laser-logo.png" alt="Ageless Beauty Laser & Spa"></a>
+        <p class="foot-tag">Renew, replenish and revitalize your skin — gold-standard laser & skincare in Surrey, BC.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#treatments">Treatments</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button class="foot-book" onclick="openBooking()">Book Now</button></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:7785659055">778-565-9055</a></li>
+          <li><a href="mailto:agelessbeautylaser@gmail.com">agelessbeautylaser@gmail.com</a></li>
+          <li>Unit 111 – 8645 160 St, Surrey, BC</li>
+          <li><a href="https://www.instagram.com/agelessbeautylaser/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Ageless Beauty Laser & Spa. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- TREATMENT MODAL -->
+<div class="modal-bg" id="treatModal">
+  <div class="modal">
+    <button class="close" onclick="closeModal('treatModal')">&times;</button>
+    <p class="eyebrow" id="tmCat"></p>
+    <h3 id="tmTitle"></h3>
+    <p id="tmDesc"></p>
+    <button class="btn btn-solid" style="width:100%;margin-top:1.8rem" onclick="closeModal('treatModal');openBooking(document.getElementById('tmTitle').textContent)">Book This Treatment</button>
+  </div>
+</div>
+
+<!-- BOOKING MODAL -->
+<div class="modal-bg" id="bookModal">
+  <div class="modal">
+    <button class="close" onclick="closeModal('bookModal')">&times;</button>
+    <div id="bookForm">
+      <p class="eyebrow">Complimentary Consultation</p>
+      <h3>Book Your Appointment</h3>
+      <p>Share your details and we'll be in touch to confirm.</p>
+      <form onsubmit="return submitBooking(event)">
+        <label>Name</label><input required type="text" name="name">
+        <label>Email</label><input required type="email" name="email">
+        <label>Phone</label><input required type="tel" name="phone">
+        <label>Treatment of Interest</label>
+        <select name="treatment" id="bookTreatment"><option value="">Select a treatment…</option></select>
+        <label>Message</label><textarea name="message" placeholder="Tell us about your skincare goals…"></textarea>
+        <button class="btn btn-solid" type="submit">Request Appointment</button>
+      </form>
+    </div>
+    <div class="form-success" id="bookSuccess">
+      <p>Thank you — we will be in touch shortly to confirm your appointment.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+const TREATMENTS = {
+  "Laser Hair Removal":[
+    ["Soprano Ice Platinum","Virtually painless laser hair removal that permanently reduces unwanted facial and body hair. Now men and women alike can make unwanted hair a thing of the past."],
+    ["Cynosure Elite iQ","Advanced dual-wavelength laser hair removal for safe, comfortable, permanent hair reduction across a wide range of skin types and treatment areas."],
+    ["LightSheer Duet & CoolGlide","Proven laser hair-removal technologies that safely and comfortably rid your skin of unwanted body hair for smooth, long-lasting results."]
+  ],
+  "Skin Rejuvenation & Tightening":[
+    ["RevLite SI","A gentle skin-rejuvenation treatment using patented Photo-Acoustic Technology Pulse (PTP) energy for a quick, effective full-face treatment that brightens and evens the skin."],
+    ["Laser Genesis","Promotes vibrant, healthy-looking skin in men and women — softening fine lines, redness and texture for a more youthful, refreshed appearance."],
+    ["Alma Accent Prime Skin Tightening","Advanced radiofrequency and ultrasound technology to firm, contour and tighten lax skin on the face and body with no downtime."],
+    ["Titan Skin Tightening","Uses infrared light to heat the deep dermis, stimulating collagen to firm and tighten loose skin for a naturally lifted look."],
+    ["Limelight Photofacial","A light-based facial that targets redness, brown spots and sun damage to restore a clear, even, luminous complexion."]
+  ],
+  "Body Sculpting & Fat Reduction":[
+    ["truSculpt 3D","With Cutera truSculpt 3D you can decrease circumference and diminish unwanted pockets of fat — revealing the new figure you've been seeking."],
+    ["EndyMed Pro 3D","Radiofrequency body contouring that tightens skin and smooths the appearance of cellulite for a firmer, more sculpted silhouette."],
+    ["Pollogen Body Contouring","Non-invasive body contouring to diminish unwanted pockets of fat and tighten skin, comfortably and without downtime."]
+  ],
+  "Facials & Skin Health":[
+    ["HydraFacial™","Get an instantly gratifying glow in just 3 steps. The award-winning HydraFacial™ System merges invigorating spa therapies with advanced medical technology to cleanse, extract and hydrate for the best skin of your life."],
+    ["OxyGeneo 3-in-1 Super Facial","Exfoliates, infuses and oxygenates the skin in a single relaxing treatment for a fresh, luminous, deeply nourished complexion."],
+    ["Carbon Laser Facial","A brightening laser facial that refines pores, evens tone and leaves the skin clearer, smoother and radiant with virtually no downtime."],
+    ["Dermaplaning & Microdermabrasion","Gentle physical resurfacing treatments that lift away dull surface cells and fine vellus hair to reveal brighter, softer, more even skin."]
+  ],
+  "Facial Procedures & Injectables":[
+    ["Botox® & Fillers","Reduce the appearance of facial wrinkles and fine lines. Botox is also used for excessive sweating (hyperhidrosis) and may help prevent chronic migraines; fillers restore volume and refine facial contours."],
+    ["Microneedling RF","The perfect solution for treating acne scars, stretch marks and deep wrinkles while improving overall skin texture and firmness."],
+    ["Dermatude Microneedling","A meta-therapy micro-needling treatment that reactivates the skin's natural repair process to firm, tighten and rejuvenate the complexion."],
+    ["Mesotherapy","Micro-infusions of tailored vitamins, minerals and active ingredients to nourish, hydrate and revitalize the skin from within."]
+  ],
+  "Peels, Acne & Corrective":[
+    ["Chemical Peels","Light, medium and deep peels tailored to your skin to reduce blemishes, pigmentation and dullness — revealing smoother, clearer, more radiant skin."],
+    ["The Perfect Derma™ Peel","A medical-grade peel that improves tone, texture and clarity while reducing the appearance of fine lines, melasma and acne scarring."],
+    ["Acne Treatments","Targeted facial and laser treatments to calm active acne, reduce blemishes and acne scars, and restore clear, healthy-looking skin."],
+    ["ZO Skin Health Stimulator Peel","A results-driven professional peel that stimulates renewal for firmer, brighter, healthier skin."]
+  ],
+  "Advanced Laser Solutions":[
+    ["Laser Tattoo Removal","RevLite laser tattoo removal gradually and safely breaks down unwanted ink for clearer skin, treatment by treatment."],
+    ["Laser Vein Therapy","Gentle light-based treatment to reduce the appearance of spider veins and small facial vessels for a clearer, more even complexion."],
+    ["Nail Fungus Treatment","A quick, effective laser solution for fungal nail infections — without the long commitment of topical or oral medications."],
+    ["Teeth Whitening","A safe, comfortable in-clinic whitening treatment to brighten your smile and unleash that confident, ageless glow."]
+  ]
+};
+
+// Build treatment groups + dropdown
+(function(){
+  const wrap = document.getElementById('treatmentGroups');
+  const sel = document.getElementById('bookTreatment');
+  for(const cat in TREATMENTS){
+    const g = document.createElement('div'); g.className='t-group reveal';
+    g.innerHTML = `<div class="t-group-title"><h3>${cat}</h3><span class="l"></span></div>`;
+    const cards = document.createElement('div'); cards.className='t-cards';
+    TREATMENTS[cat].forEach(([title,desc])=>{
+      const c = document.createElement('div'); c.className='t-card';
+      c.innerHTML = `<span>${cat}</span><h4>${title}</h4>`;
+      c.onclick = ()=>openTreatment(cat,title,desc);
+      cards.appendChild(c);
+      const o = document.createElement('option'); o.value=title; o.textContent=title; sel.appendChild(o);
+    });
+    g.appendChild(cards); wrap.appendChild(g);
+  }
+  observeReveals();
+})();
+
+function openTreatment(cat,title,desc){
+  document.getElementById('tmCat').textContent = cat;
+  document.getElementById('tmTitle').textContent = title;
+  document.getElementById('tmDesc').textContent = desc;
+  openModal('treatModal');
+}
+function openBooking(preset){
+  document.getElementById('bookForm').style.display='block';
+  document.getElementById('bookSuccess').classList.remove('show');
+  if(preset){document.getElementById('bookTreatment').value = preset;}
+  openModal('bookModal');
+}
+function submitBooking(e){
+  e.preventDefault();
+  document.getElementById('bookForm').style.display='none';
+  document.getElementById('bookSuccess').classList.add('show');
+  return false;
+}
+function openModal(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden';}
+function closeModal(id){document.getElementById(id).classList.remove('open');document.body.style.overflow='';}
+document.querySelectorAll('.modal-bg').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)closeModal(m.id);}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.modal-bg.open').forEach(m=>closeModal(m.id));});
+
+// Hamburger
+const ham=document.getElementById('ham'),nav=document.getElementById('navLinks');
+ham.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+// Reveal
+function observeReveals(){
+  const io=new IntersectionObserver((es)=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}})},{threshold:.14});
+  document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
+}
+observeReveals();
+</script>
+</body>
+</html>
